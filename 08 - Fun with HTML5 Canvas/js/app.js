@@ -3,6 +3,7 @@ const ctx = canvas.getContext('2d');
 const board = document.querySelector('.board');
 const color = document.querySelector('#color');
 const range = document.querySelector('#range');
+const rainbow = document.querySelector('#rainbow');
 const clear = document.querySelector('#clear');
 
 
@@ -21,14 +22,15 @@ let hue = 0;
 let direction = true;
 
 function config() {
-    console.log(color.value);
     ctx.strokeStyle = color.value;
     ctx.lineWidth = range.value;
 }
 
 function draw(e) {
-    if (!isDrawing) return; // stop the fn from running when they are not moused down
-    // ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+    if(!isDrawing) return; // stop the fn from running when they are not moused down
+
+    if(rainbow.checked) ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+
     ctx.beginPath();
     // start from
     ctx.moveTo(lastX, lastY);
@@ -67,4 +69,5 @@ canvas.addEventListener('mouseout', () => isDrawing = false);
 
 color.addEventListener('change', config);
 range.addEventListener('change', config);
+rainbow.addEventListener('change', config);
 clear.addEventListener('click', () => ctx.clearRect(0, 0, canvas.width, canvas.height));
