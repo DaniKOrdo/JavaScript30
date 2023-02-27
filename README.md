@@ -9,8 +9,8 @@ My own way of doing the projects of [Javascript30](https://javascript30.com/)
 - [✅] 05 - Flex Panel Gallery
 - [✅] 06 - Type Ahead
 - [✅] 07 - Array Cardio Day 2
-- [⬛] 08 - Fun with HTML5 Canvas
-- [⬛] 09 - Dev Tools Domination
+- [✅] 08 - Fun with HTML5 Canvas
+- [✅] 09 - Dev Tools Domination
 - [⬛] 10 - Hold Shift and Check Checkboxes
 - [⬛] 11 - Custom Video Player
 - [⬛] 12 - Key Sequence Detection
